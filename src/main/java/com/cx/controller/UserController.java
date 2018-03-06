@@ -1,7 +1,8 @@
 package com.cx.controller;
 
+import com.cx.annotation.SysLog;
 import com.cx.entity.User;
-import com.cx.repository.es.UserRepository;
+import com.cx.repository.jpa.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,6 +20,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @SysLog
     @RequestMapping("/findAll/{currentPage}/{size}")
     @ResponseBody
     public Page<User> findAll(@PathVariable("currentPage") @RequestParam(defaultValue = "1") Integer currentPage,
@@ -28,6 +30,7 @@ public class UserController {
         return page;
     }
 
+    @SysLog
     @RequestMapping("/find/{id}")
     @ResponseBody
     public User findById(@PathVariable("id") String id) {

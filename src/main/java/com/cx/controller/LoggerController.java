@@ -1,7 +1,7 @@
 package com.cx.controller;
 
 import com.cx.entity.Logger;
-import com.cx.repository.jpa.LoggerRepository;
+import com.cx.repository.es.LoggerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

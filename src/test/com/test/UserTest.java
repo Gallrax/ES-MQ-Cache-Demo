@@ -3,7 +3,7 @@ package com.test;
 import com.cx.entity.Depart;
 import com.cx.entity.User;
 import com.cx.repository.jpa.DepartRepository;
-import com.cx.repository.es.UserRepository;
+import com.cx.repository.jpa.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

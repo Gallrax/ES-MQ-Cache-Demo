@@ -1,4 +1,4 @@
-package com.cx.repository.es;
+package com.cx.repository.jpa;
 
 import com.cx.entity.User;
 import org.springframework.cache.annotation.CacheConfig;
