@@ -3,7 +3,7 @@ package com.cx.entity;
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import javax.persistence.Entity;
+import java.util.Date;
 
 /**
  * @Description:
@@ -21,4 +21,5 @@ public class Logger {
     private String params;
     private String result;//执行结果
     private Long time;//执行时长
+    private Date insertTime;//查询时间
 }

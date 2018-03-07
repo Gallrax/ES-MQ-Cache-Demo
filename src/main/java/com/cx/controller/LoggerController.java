@@ -20,7 +20,6 @@ public class LoggerController {
     private LoggerRepository loggerRepository;
 
     @RequestMapping("/findAll/{currentPage}/{size}")
-    @ResponseBody
     public Page<Logger> findAll(@PathVariable("currentPage") @RequestParam(defaultValue = "1") Integer currentPage,
                                 @PathVariable("size") @RequestParam(defaultValue = "3") Integer size) {
         PageRequest pageRequest = new PageRequest(currentPage, size);

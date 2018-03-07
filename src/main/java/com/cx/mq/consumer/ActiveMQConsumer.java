@@ -20,7 +20,7 @@ public class ActiveMQConsumer {
     @Autowired
     private LoggerRepository loggerRepository;
 
-//    @JmsListener(destination = "es-mq-cache-demo-logger")
+    @JmsListener(destination = "es-mq-cache-demo-logger")
     public void receive(String message) {
         Logger logger = JSONObject.parseObject(message, Logger.class);
         log.info(" ActiveMQConsumer receive : " + message);

@@ -22,9 +22,8 @@ public class UserController {
 
     @SysLog
     @RequestMapping("/findAll/{currentPage}/{size}")
-    @ResponseBody
-    public Page<User> findAll(@PathVariable("currentPage") @RequestParam(defaultValue = "1") Integer currentPage,
-                              @PathVariable("size") @RequestParam(defaultValue = "3") Integer size) {
+    public Page<User> findAll(@PathVariable(value = "currentPage") Integer currentPage,
+                              @PathVariable(value = "size") Integer size) {
         PageRequest pageRequest = new PageRequest(currentPage, size);
         Page<User> page = userRepository.findAll(pageRequest);
         return page;
@@ -32,9 +31,8 @@ public class UserController {
 
     @SysLog
     @RequestMapping("/find/{id}")
-    @ResponseBody
     public User findById(@PathVariable("id") String id) {
-        User user = userRepository.findOne(id);
+        User user = userRepository.findById(id);
         return user;
     }
 }
